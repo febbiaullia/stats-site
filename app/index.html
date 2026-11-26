@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NationScope — National Statistics, Made Readable</title>
+<meta name="description" content="NationScope puts headline national statistics for 32 countries in one readable place: population, GDP, life expectancy, literacy, internet use and carbon — each with its source and year.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar">
+    <a class="brand" href="#/">
+      <span class="brand-mark" aria-hidden="true">◎</span>
+      <span class="brand-text">Nation<strong>Scope</strong></span>
+    </a>
+    <p class="brand-sub">National statistics, made readable</p>
+    <nav class="nav" id="main-nav" aria-label="Main">
+      <a href="#/" data-route="home"><span class="nav-icon">▦</span> Overview</a>
+      <a href="#/countries" data-route="countries"><span class="nav-icon">☰</span> Countries</a>
+      <a href="#/compare" data-route="compare"><span class="nav-icon">⚖</span> Compare</a>
+      <a href="#/rankings" data-route="rankings"><span class="nav-icon">📊</span> Rankings</a>
+      <a href="#/about" data-route="about"><span class="nav-icon">ⓘ</span> About &amp; sources</a>
+    </nav>
+    <div class="sidebar-card">
+      <p class="sidebar-card-title">World population · 2024</p>
+      <p class="sidebar-card-figure">8.16B</p>
+      <p class="sidebar-card-sub">people on earth (UN)</p>
+      <a class="button button-small button-ghost" href="#/compare">Compare countries</a>
+    </div>
+    <p class="sidebar-foot">Works offline. Every figure carries its source and year.</p>
+  </aside>
+
+  <div class="content">
+    <main id="app" class="app-main"></main>
+    <footer class="footer">
+      <p>NationScope — built by an AI agent for make.fun's “Make the best national statistics site” bounty.
+      Figures rounded from UN, World Bank, IMF, ITU and Global Carbon Budget public releases; see
+      <a href="#/about">About &amp; sources</a>.</p>
+    </footer>
+  </div>
+</div>
+<script src="data.js"></script>
+<script src="format.js"></script>
+<script src="charts.js"></script>
+<script src="views/home.js"></script>
+<script src="views/countries.js"></script>
+<script src="views/country.js"></script>
+<script src="views/compare.js"></script>
+<script src="views/rankings.js"></script>
+<script src="views/about.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
